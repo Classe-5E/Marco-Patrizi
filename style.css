@@ -35,7 +35,7 @@ header {
     text-align: end;
 }
 
-ul {
+.menu_list {
     position: absolute;
     top: 70px;
     right: 20px;
@@ -43,20 +43,20 @@ ul {
     flex-direction: column;
     gap: 30px;
 }
-ul:after{
+.menu_list:after{
     content: "";
     position: absolute;
     inset: 0;
     background-color: white;
     z-index: -1;
 }
-ul li {
+.menu_list li {
     display: none;
     border-bottom: solid 2px transparent;
     position: relative;
 
 }
-ul li a:after{
+.menu_list li a:after{
     content: " ";
     position: absolute;
     bottom: -3px;
@@ -67,7 +67,7 @@ ul li a:after{
     transform: scaleX(0);
     transition: .2s;
 }
-ul li a:hover::after{
+.menu_list li a:hover::after{
     transform: scaleX(100%);
 }
 
@@ -121,7 +121,7 @@ ul li a:hover::after{
     transform: rotate(180deg);
 }
 
-#checkbox:checked ~ ul li{
+#checkbox:checked ~ .menu_list li{
     display: unset;
 }
 
@@ -136,13 +136,16 @@ section {
     flex-direction: column;
     width: fit-content;
     justify-content: center;
-    max-width: 700px;
+    max-width: fit-content;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.26);
+    border-radius: 1em;
+    height: fit-content;
 }
 
 .heroImage {
     background-color: black;
-    height: 350px;
-    width: 350px;
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 0 0 1em 1em;
 }
 
@@ -150,8 +153,10 @@ section {
     background-color: white;
     display: flex;
     flex-direction: column;
+    gap: 32px;;
     box-sizing: border-box;
     width: 100%;
+    height: fit-content;
     padding: 20px;
     border-radius: 1em 1em 0 0;
 }
@@ -159,14 +164,43 @@ section {
 .heroText h1 {
     font-size: 3em;
 }
+.skills{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.skills li{
+    height: 64px;
+    width: 64px;
+}
+.html{
+    background-image: url(./Grafiche/icons8-html-5.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.css{
+    background-image: url(./Grafiche/icons8-css.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.js{
+    background-image: url(./Grafiche/icons8-javascript.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.react{
+    background-image: url(./Grafiche/icons8-react-native.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 @media (min-width: 800px) {
-    ul {
+    .menu_list{
         flex-direction: row;
         position: unset;
     }
 
-    ul li {
+    .menu li {
         display: unset;
     }
 
