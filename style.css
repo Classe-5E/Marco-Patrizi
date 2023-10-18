@@ -167,31 +167,37 @@ section {
 .skills{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .skills li{
-    height: 64px;
-    width: 64px;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
 }
 .html{
     background-image: url(./Grafiche/icons8-html-5.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: rgb(252, 233, 216);
 }
 .css{
     background-image: url(./Grafiche/icons8-css.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: rgb(220, 238, 255);
 }
 .js{
     background-image: url(./Grafiche/icons8-javascript.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: rgb(253, 255, 205);
 }
 .react{
     background-image: url(./Grafiche/icons8-react-native.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: rgb(226, 252, 255);
 }
 
 @media (min-width: 800px) {
