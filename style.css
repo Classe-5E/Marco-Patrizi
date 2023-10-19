@@ -45,12 +45,14 @@ header {
 }
 
 .menu_list li {
-    display: none;
     border-bottom: solid 2px transparent;
     position: relative;
+    transform:translateX(200px);
+    transition: ease-out .5s;
     z-index: 2;
+    width: fit-content;
 }
-.menu_list li a:after{
+.menu_list li a::after{
     content: " ";
     position: absolute;
     bottom: -3px;
@@ -117,7 +119,7 @@ header {
 }
 
 #checkbox:checked ~ .menu_list li{
-    display: unset;
+    transform: translateX(0);
 }
 #checkbox:checked ~ .menu_list:after{
     transform: translateX(0);
@@ -191,24 +193,28 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgb(252, 233, 216);
+    border: solid 1px rgb(255, 214, 177);
 }
 .css{
     background-image: url(./Grafiche/icons8-css.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgb(220, 238, 255);
+    border: solid 1px rgb(179, 218, 255);
 }
 .js{
     background-image: url(./Grafiche/icons8-javascript.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgb(253, 255, 205);
+    border: solid 1px rgb(251, 255, 125);
 }
 .react{
     background-image: url(./Grafiche/icons8-react-native.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgb(226, 252, 255);
+    border: solid 1px rgb(148, 244, 255);
 }
 
 @media (min-width: 800px) {
@@ -218,7 +224,8 @@ section {
     }
 
     .menu li {
-        display: unset;
+        transform: translateX(0);
+        transition: 0S;
     }
     .menu_list:after{
         display: none;
