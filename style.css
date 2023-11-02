@@ -19,6 +19,10 @@ body {
     font-weight: 500;
     background-color: rgb(240, 240, 240);
 }
+img{
+    height: 32px;
+    width: 32px;
+}
 
 header {
     background-color: rgb(255, 255, 255);
@@ -28,7 +32,10 @@ header {
     padding: 20px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 }
-
+.title{
+    font-size: 1.5em;
+    font-weight: 600;
+}
 .menu {
     display: flex;
     flex-direction: column;
@@ -36,21 +43,25 @@ header {
 }
 
 .menu_list {
-    position: absolute;
+    position: fixed;
     top: 70px;
     right: 20px;
-    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 2px;
 }
 
 .menu_list li {
     border-bottom: solid 2px transparent;
     position: relative;
     transform:translateX(200px);
-    transition: ease-out .5s;
+    transition: ease-out .3s;
     z-index: 2;
     width: fit-content;
+    height: fit-content;
 }
 .menu_list li a::after{
     content: " ";
@@ -60,6 +71,7 @@ header {
     width: 100%;
     left: 0;
     background-color: black;
+    border-radius: 2px;
     transform: scaleX(0);
     transition: .2s;
 }
@@ -72,7 +84,6 @@ header {
 }
 
 .toggle {
-    position: absolute;
     top: 15px;
     right: 25px;
     width: 30px;
@@ -114,16 +125,11 @@ header {
 }
 
 #checkbox:checked+.toggle {
+    position: fixed;
     transition-duration: .5s;
     transform: rotate(180deg);
 }
 
-#checkbox:checked ~ .menu_list li{
-    transform: translateX(0);
-}
-#checkbox:checked ~ .menu_list:after{
-    transform: translateX(0);
-}
 .menu_list:after{
     display: unset;
     content: "";
@@ -138,10 +144,16 @@ header {
     transition: ease-out .3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.205);
 }
+#checkbox:checked ~ .menu_list li{
+    transform: translateX(0);
+}
+#checkbox:checked ~ .menu_list:after{
+    transform: translateX(0);
+}
 section {
     display: flex;
     justify-content: center;
-    padding: 100px 0;
+    padding: 100px 25px;
 }
 
 .hero {
@@ -181,11 +193,11 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 16px;
 }
 .skills li{
-    height: 72px;
-    width: 72px;
+    height: 64px;
+    width: 64px;
     border-radius: 50%;
 }
 .html{
@@ -194,6 +206,7 @@ section {
     background-position: center;
     background-color: rgb(252, 233, 216);
     border: solid 1px rgb(255, 214, 177);
+    background-size: 42px;
 }
 .css{
     background-image: url(./Grafiche/icons8-css.svg);
@@ -201,6 +214,7 @@ section {
     background-position: center;
     background-color: rgb(220, 238, 255);
     border: solid 1px rgb(179, 218, 255);
+    background-size: 42px;
 }
 .js{
     background-image: url(./Grafiche/icons8-javascript.svg);
@@ -208,6 +222,7 @@ section {
     background-position: center;
     background-color: rgb(253, 255, 205);
     border: solid 1px rgb(251, 255, 125);
+    background-size: 42px;
 }
 .react{
     background-image: url(./Grafiche/icons8-react-native.svg);
@@ -215,12 +230,14 @@ section {
     background-position: center;
     background-color: rgb(226, 252, 255);
     border: solid 1px rgb(148, 244, 255);
+    background-size: 40px;
 }
 
 @media (min-width: 800px) {
     .menu_list{
         flex-direction: row;
         position: unset;
+        display: flex;
     }
 
     .menu li {
