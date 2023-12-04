@@ -1,4 +1,7 @@
 /* settaggi */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 a,
 li,
 ul,

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Patrizi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./Grafiche/SVG/Logo 2.svg">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="./Grafiche/SVG/Logo 2.svg" alt="">
+        <a href="index.html" class="title">Marco Patrizi</a>
+        <div class="menu">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="toggle">
+                <div class="bars" id="bar1"></div>
+                <div class="bars" id="bar2"></div>
+                <div class="bars" id="bar3"></div>
+            </label>
+            <ul class="menu_list" >
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <form class="bg-zinc-900 p-6 rounded-xl flex flex-col w-fit gap-3 text-left m-auto mt-10 text-white" >
+            <div class="flex gap-5">
+                <div class="flex flex-col">
+                    <label>Nome: </label>
+                    <input type="text"  class="p-1 rounded outline-none bg-zinc-700 focus:bg-zinc-600"/>
+                </div>
+
+                <div class="flex flex-col">
+                    <label>Cognome: </label>
+                    <input type="text" class="p-1 rounded outline-none bg-zinc-700 focus:bg-zinc-600"/>
+                </div>
+            </div>
+            
+            <div class="flex flex-col">
+                <label>Email: </label>
+                <input type="email" class="p-1 rounded outline-none bg-zinc-700 focus:bg-zinc-600"/>
+            </div>
+
+            <div class="flex flex-col">
+                <label>Password: </label>
+                <input type="password" class="p-1 rounded outline-none bg-zinc-700 focus:bg-zinc-600"/>
+            </div>
+
+            <div class="flex gap-5">
+
+                <div class="flex flex-col">
+                    <label>Data di nascita: </label>
+                    <input type="date" class="p-1 rounded outline-none bg-zinc-700 focus:bg-zinc-600"/>
+                </div>
+
+                <div class="flex flex-col">
+                    <label>Comune: </label>
+                    <select id="" class="p-1 rounded outline-none bg-zinc-700 focus:bg-zinc-600">
+                        <option value=""></option>
+                        <option value="Veroli">Veroli</option>
+                        <option value="Isola del Liri">Isola del Liri</option>
+                        <option value="Sora">Sora</option>
+                        <option value="Boville">Boville</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col">
+                    <label>Provincia: </label>
+                    <select  id="" class="p-1 rounded outline-none bg-zinc-700 focus:bg-zinc-600">
+                        <option value=""></option>
+                        <option value="Frosinone">Frosinone</option>
+                        <option value="Latina">Latina</option>
+                        <option value="Roma">Roma</option>
+                        <option value="Viterbo">Viterbo</option>
+                    </select>
+                </div>
+            </div>
+            
+
+            <div class="flex flex-col">
+                <label>Sesso: </label>
+                <div class="flex gap-1">
+                    <input type="radio" name="sesso" id="" value="maschio"/>
+                    <label >Maschio</label>
+                </div>
+                <div class="flex gap-1">
+                    <input type="radio" name="sesso" id="" value="femmina"/>
+                    <label >Femmina</label>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <label>Accetto termini e condizioni: </label>
+                <input type="checkbox"/>
+            </div>
+
+            <button type="submit" class="bg-zinc-700">submit</button>
+
+        </form>
+    </section>
+</body>
+
+</html>
